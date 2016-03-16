@@ -69,6 +69,15 @@
 			<section>
 				<h1>So, what are they?</h1>
 			</section>
+			<!-- 4.X Avoid Buggy Code -->
+			<section data-background="img/yoda.jpg">
+				<h2>Avoid Pesky Bugs</h2>
+				<p>By using <strong>Yoda Conditions</strong> instead of regular conditions, the variable cannot be set to the value of that which you are checking it against, if you accidentally omit an equal sign.</p>
+				<pre><code>if ( 'strong' == $force ) {
+    $victorious = you_will( $be );
+}</code></pre>
+				<p>If an equal sign was ommitted from the condition, an error would be generated instead of it evaluating to true!</p>
+			</section>
 			<!-- 5. What are they are NOT -->
 			<section>
 				<h1>What they are <em class="gold">NOT</em></h1>
