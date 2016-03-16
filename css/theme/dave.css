@@ -181,6 +181,10 @@ body {
   font-size: 1.3em;
 }
 
+.reveal h3 a {
+  display: block;
+}
+
 .reveal h4 {
   font-size: 1em;
 }
@@ -308,6 +312,7 @@ body {
 .reveal blockquote p {
   font-size: 1.25em;
   line-height: 1.5;
+  margin-bottom: 0;
   quotes: '\201c' '\201d';
   text-align: left !important;
 }
