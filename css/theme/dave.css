@@ -10,6 +10,7 @@
   font-weight: 700;
 }
 
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("../../fonts/Ubuntu-BI.eot");
@@ -19,6 +20,7 @@
   font-style: italic;
   font-weight: 700;
 }
+
 
 @font-face {
   font-family: 'Ubuntu Condensed';
@@ -30,6 +32,7 @@
   font-weight: 400;
 }
 
+
 @font-face {
   font-family: 'Ubuntu Light';
   src: url("../../fonts/Ubuntu-L.eot");
@@ -39,6 +42,7 @@
   font-style: normal;
   font-weight: 200;
 }
+
 
 @font-face {
   font-family: 'Ubuntu Light';
@@ -50,6 +54,7 @@
   font-weight: 200;
 }
 
+
 @font-face {
   font-family: 'Ubuntu Light';
   src: url("../../fonts/Ubuntu-M.eot");
@@ -59,6 +64,7 @@
   font-style: normal;
   font-weight: 400;
 }
+
 
 @font-face {
   font-family: 'Ubuntu Light';
@@ -70,6 +76,7 @@
   font-weight: 400;
 }
 
+
 @font-face {
   font-family: 'Ubuntu';
   src: url("../../fonts/Ubuntu-R.eot");
@@ -79,6 +86,7 @@
   font-style: normal;
   font-weight: 400;
 }
+
 
 @font-face {
   font-family: 'Ubuntu';
@@ -102,7 +110,6 @@
 * For other themes, change $codeBackground accordingly.
 *
 */
-
 
 /*********************************************
 * GLOBAL STYLES
@@ -131,7 +138,6 @@ body {
   line-height: 1.3;
   font-weight: inherit;
 }
-
 
 /*********************************************
 * HEADERS
@@ -165,7 +171,13 @@ body {
 .reveal h3 .gold,
 .reveal h4 .gold,
 .reveal h5 .gold,
-.reveal h6 .gold {
+.reveal h6 .gold,
+.reveal h1 span,
+.reveal h2 span,
+.reveal h3 span,
+.reveal h4 span,
+.reveal h5 span,
+.reveal h6 span {
   color: #E7AD52;
 }
 
@@ -189,7 +201,6 @@ body {
   font-size: 1em;
 }
 
-
 /*.reveal h1 {
     font-size: 3.77em;
 }
@@ -207,12 +218,10 @@ body {
 }
 */
 
-
 /*.reveal h1 {
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 */
-
 
 /*********************************************
 * OTHER
@@ -267,7 +276,6 @@ body {
 .reveal .lang-list li.javascript {
   color: #F7DB4D;
 }
-
 
 /* Ensure certain elements are never larger than the slide itself */
 
@@ -453,7 +461,6 @@ body {
   vertical-align: top;
 }
 
-
 /*********************************************
 * LINKS
 *********************************************/
@@ -476,7 +483,6 @@ body {
   color: #fff;
   background: #6a1521;
 }
-
 
 /*********************************************
 * IMAGES
@@ -520,7 +526,6 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
-
 /*********************************************
 * NAVIGATION CONTROLS
 *********************************************/
@@ -561,7 +566,6 @@ body {
   border-top-color: #dd5567;
 }
 
-
 /*********************************************
 * PROGRESS BAR
 *********************************************/
@@ -576,7 +580,6 @@ body {
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
-
 
 /*********************************************
 * SLIDE NUMBER

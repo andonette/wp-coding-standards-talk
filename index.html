@@ -2,305 +2,312 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>Why switching to WordPress Coding Standards will make you a better developer</title>
-	<meta name="author" content="Dave Green">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/dave.css" id="theme">
-	<!-- Code syntax highlighting -->
-	<link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
-	<!-- Printing and PDF exports -->
-	<script>
-	var link = document.createElement('link');
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
-	<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <title>Why switching to WordPress Coding Standards will make you a better developer</title>
+    <meta name="author" content="Dave Green">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/dave.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
 	<script src="lib/js/html5shiv.js"></script>
 <![endif]-->
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<!-- 1. Talk introduction -->
-			<section>
-				<h2>Why switching to</h2>
-				<h1 class="gold">WordPress <br/> Coding Standards</h1>
-				<h2>will make you a <br/> better developer</h2>
-			</section>
-			<!-- 2. Personal introduction -->
-			<section data-background="img/dave.jpg">
-				<h1>Dave Green</h1>
-				<h3>Senior Developer at Make Do</h3>
-				<h3><a href="https://davetgreen.me">davetgreen.me</a></h3>
-				<h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
-			</section>
-			<!-- 3. My WPCS story -->
-			<section data-background="img/story.jpg">
-				<h1>My WPCS Story</h1>
-				<ul>
-					<li>
-						<p>Had used <strong>PSR2</strong> standards in the past.</p>
-					</li>
-					<li>
-						<p><strong>OCD</strong> when it comes to all things digital.</p>
-					</li>
-					<li>
-						<p>Work on more <strong>team</strong> projects than ever.</p>
-					</li>
-					<li>
-						<p>Recently moved into writing <strong>plugins</strong>.</p>
-					</li>
-					<li>
-						<p>Trying to <strong>contribute</strong> more to core.</p>
-					</li>
-					<li>
-						<p>Switched in <strong>September 2015</strong>.</p>
-					</li>
-				</ul>
-			</section>
-			<!-- 4. What they are -->
-			<section>
-				<h1>So, what are they?</h1>
-			</section>
-			<!-- 4.1 Set of rules -->
-			<section data-background="img/checklist.jpg">
-				<h1>Rules your code should conform to, and will be checked against</h1>
-			</section>
-			<!-- 4.2 Four standards -->
-			<section data-background="img/code2.jpg">
-				<h1>Four language specific standards</h1>
-				<ul class="lang-list">
-					<li class="php"><span>PHP</span></li>
-					<li class="html"><span>HTML</span></li>
-					<li class="css"><span>CSS</span></li>
-					<li class="javascript"><span>JS</span></li>
-				</ul>
-				<h4><span class="gold">Accessibility</span> Standards coming soon!</h4>
-			</section>
-			<!-- 4.3 -->
-			<section data-background="img/wordpress.jpg">
-				<h1>Built for use in wordpress core, themes &amp; plugins</h1>
-			</section>
-			<!-- 4.4 -->
-			<section data-background="img/community.jpg">
-				<h1>Developed by the community, for the community</h1>
-			</section>
-			<!-- 4.5 -->
-			<section data-background="img/calendar.jpg">
-				<h1>Have existed in some form or other since <span class="gold">2009</span></h1>
-			</section>
-			<!-- 5. What are they are NOT -->
-			<section>
-				<h1>What they are <em class="gold">NOT</em></h1>
-			</section>
-			<!-- 5.1 The Hardcore -->
-			<section data-background="img/albert.jpg">
-				<h1>Not just for the hardcore</h1>
-			</section>
-			<!-- 5.2  Core Contributors -->
-			<section data-background="img/contributors.jpg">
-				<h1>Not just for core contributors</h1>
-			</section>
-			<!-- 5.3 Right & Wrong -->
-			<section data-background="img/right-wrong.jpg">
-				<h1>Not a definition of right &amp; wrong</h1>
-				<h2>Just the "WordPress way"</h2>
-			</section>
-			<!-- 5.4 Guilt -->
-			<section data-background="img/guilty.jpg">
-				<h1>Not there to make you feel guilty</h1>
-			</section>
-			<!-- 5.4 Complexity -->
-			<section data-background="img/smash.jpg">
-				<h1>Not going to add more complexity to your code</h1>
-			</section>
-			<!-- 6. 10 Benefits of switching -->
-			<section>
-				<h1>10 Benefits of Switching to <span class="gold">WPCS</span></h1>
-			</section>
-			<!-- 6.1 -->
-			<section>
-				<h1>#1 - Benefit Title</h1>
-			</section>
-			<!-- 6.2 -->
-			<section>
-				<h1>#2 - Benefit Title</h1>
-			</section>
-			<!-- 6.3 -->
-			<section>
-				<h1>#3 - Benefit Title</h1>
-			</section>
-			<!-- 6.4 -->
-			<section>
-				<h1>#4 - Benefit Title</h1>
-			</section>
-			<!-- 6.5 -->
-			<section>
-				<h1>#5 - Benefit Title</h1>
-			</section>
-			<!-- 6.6 -->
-			<section>
-				<h1>#6 - Benefit Title</h1>
-			</section>
-			<!-- 6.7 -->
-			<section>
-				<h1>#7 - Benefit Title</h1>
-			</section>
-			<!-- 6.8 -->
-			<section>
-				<h1>#8 - Benefit Title</h1>
-			</section>
-			<!-- 6.9 Avoid Buggy Code -->
-			<section data-background="img/yoda.jpg">
-				<h2>Avoid Pesky Bugs, You Shall</h2>
-				<p>Using <strong>"Yoda"</strong>, rather than regular conditions means that if you accidentally omit an equal sign, a variable cannot be set to the value of what you are comparing it against.</p>
-				<pre><code>if ( 'strong' == $force ) {
+    <div class="reveal">
+        <div class="slides">
+            <!-- 1. Talk introduction -->
+            <section>
+                <h2>Why switching to</h2>
+                <h1 class="gold">WordPress <br/> Coding Standards</h1>
+                <h2>will make you a <br/> better developer</h2>
+            </section>
+            <!-- 2. Personal introduction -->
+            <section data-background="img/dave.jpg">
+                <h1>Dave Green</h1>
+                <h3>Senior Developer at Make Do</h3>
+                <h3><a href="https://davetgreen.me">davetgreen.me</a></h3>
+                <h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
+            </section>
+            <!-- 3. My WPCS story -->
+            <section data-background="img/story.jpg">
+                <h1>My WPCS Story</h1>
+                <ul>
+                    <li>
+                        <p>Had used <strong>PSR2</strong> standards in the past.</p>
+                    </li>
+                    <li>
+                        <p><strong>OCD</strong> when it comes to all things digital.</p>
+                    </li>
+                    <li>
+                        <p>Work on more <strong>team</strong> projects than ever.</p>
+                    </li>
+                    <li>
+                        <p>Recently moved into writing <strong>plugins</strong>.</p>
+                    </li>
+                    <li>
+                        <p>Trying to <strong>contribute</strong> more to core.</p>
+                    </li>
+                    <li>
+                        <p>Switched in <strong>September 2015</strong>.</p>
+                    </li>
+                </ul>
+            </section>
+            <!-- 4. What they are -->
+            <section>
+                <h1>So, what are they?</h1>
+            </section>
+            <!-- 4.1 Set of rules -->
+            <section data-background="img/checklist.jpg">
+                <h1>Rules your code should conform to, and will be checked against</h1>
+            </section>
+            <!-- 4.2 Four standards -->
+            <section data-background="img/code2.jpg">
+                <h1>Four language specific standards</h1>
+                <ul class="lang-list">
+                    <li class="php"><span>PHP</span></li>
+                    <li class="html"><span>HTML</span></li>
+                    <li class="css"><span>CSS</span></li>
+                    <li class="javascript"><span>JS</span></li>
+                </ul>
+                <h4><span class="gold">Accessibility</span> Standards coming soon!</h4>
+            </section>
+            <!-- 4.3 -->
+            <section data-background="img/wordpress.jpg">
+                <h1>Built for use in wordpress core, themes &amp; plugins</h1>
+            </section>
+            <!-- 4.4 -->
+            <section data-background="img/community.jpg">
+                <h1>Developed by the community, for the community</h1>
+            </section>
+            <!-- 4.5 -->
+            <section data-background="img/calendar.jpg">
+                <h1>Have existed in some form or other since <span class="gold">2009</span></h1>
+            </section>
+            <!-- 5. What are they are NOT -->
+            <section>
+                <h1>What they are <em class="gold">NOT</em></h1>
+            </section>
+            <!-- 5.1 The Hardcore -->
+            <section data-background="img/albert.jpg">
+                <h1>Not just for the hardcore</h1>
+            </section>
+            <!-- 5.2  Core Contributors -->
+            <section data-background="img/contributors.jpg">
+                <h1>Not just for core contributors</h1>
+            </section>
+            <!-- 5.3 Right & Wrong -->
+            <section data-background="img/right-wrong.jpg">
+                <h1>Not a definition of right &amp; wrong</h1>
+                <h2>Just the "WordPress way"</h2>
+            </section>
+            <!-- 5.4 Guilt -->
+            <section data-background="img/guilty.jpg">
+                <h1>Not there to make you feel guilty</h1>
+            </section>
+            <!-- 5.4 Complexity -->
+            <section data-background="img/smash.jpg">
+                <h1>Not going to add more complexity to your code</h1>
+            </section>
+            <!-- 6. 10 Benefits of switching -->
+            <section>
+                <h1>10 Benefits of Switching to <span class="gold">WPCS</span></h1>
+            </section>
+            <!-- 6.1 -->
+            <section data-background="img/reading.jpg">
+                <h1>Easier to Read</h1>
+            </section>
+            <!-- 6.2 -->
+            <section>
+                <h1>#2 - Benefit Title</h1>
+            </section>
+            <!-- 6.3 -->
+            <section>
+                <h1>#3 - Benefit Title</h1>
+            </section>
+            <!-- 6.4 -->
+            <section>
+                <h1>#4 - Benefit Title</h1>
+            </section>
+            <!-- 6.5 -->
+            <section>
+                <h1>#5 - Benefit Title</h1>
+            </section>
+            <!-- 6.6 -->
+            <section>
+                <h1>#6 - Benefit Title</h1>
+            </section>
+            <!-- 6.7 -->
+            <section data-background="img/documentation.jpg">
+                <h1>Better Documentation</h1>
+                <h2>It will be <span>higher quality</span> and far <span>more comprehensive</span>.</h2>
+            </section>
+            <!-- 6.8 -->
+            <section data-background="img/security.jpg">
+                <h1>More Secure Code</h1>
+                <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span> of your data.</h1>
+            </section>
+            <!-- 6.9 Avoid Buggy Code -->
+            <section data-background="img/yoda.jpg">
+                <h2>Avoid Pesky Bugs, You Shall</h2>
+                <p>Using <strong>"Yoda"</strong>, rather than regular conditions means that if you accidentally omit an equal sign, a variable cannot be set to the value of what you are comparing it against.</p>
+                <pre><code>if ( 'strong' == $force ) {
     $victorious = you_will( $be );
 }</code></pre>
-				<p>Removing an equal sign from the condition would result in a parse error <strong>instead</strong> of the condition evaluating to true!</p>
-			</section>
-			<!-- 6.10 -->
-			<section>
-				<h1>#10 - Benefit Title</h1>
-			</section>
-			<!-- 7. Making the switch -->
-			<section>
-				<h1>Making the Switch</h1>
-				<h2>You'll need the following...</h2>
-			</section>
-			<!-- 7.1 PHP Code Sniffer -->
-			<section data-background="img/sniffing.jpg">
-				<h1>PHP Code Sniffer</h1>
-				<p>Install PHPCS on your machine using <strong>PEAR</strong> or <strong>Composer</strong>. Alternatively, use <strong>Homebrew</strong> if you are an OSX user.</p>
-				<p>Add the path to your <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
-			</section>
-			<!-- 7.2 WPCS from GitHub -->
-			<section data-background="img/coding-standards.jpg">
-				<h1>WPCS from GitHub</h1>
-				<p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way.</p>
-				<p>Place them in suitable directory and make a note of the location. Mine are in: <strong>/Users/davetgreen/.wpcs</strong></p>
-			</section>
-			<!-- 7.3
+                <p>Removing an equal sign from the condition would result in a parse error <strong>instead</strong> of the condition evaluating to true!</p>
+            </section>
+            <!-- 6.10 -->
+            <section>
+                <h1>#10 - Benefit Title</h1>
+            </section>
+            <!-- 7. Making the switch -->
+            <section data-background="img/switch.jpg">
+                <h1>Making the Switch</h1>
+                <h2>Automatically check your PHP as you write it.</h2>
+            </section>
+            <!-- 7.1 PHP Code Sniffer -->
+            <section data-background="img/sniffing.jpg">
+                <h1>PHP Code Sniffer</h1>
+                <p>Install PHPCS on your machine using <strong>PEAR</strong> or <strong>Composer</strong>. Alternatively, use <strong>Homebrew</strong> if you are an OSX user.</p>
+                <p>Add the path to your <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
+            </section>
+            <!-- 7.2 WPCS from GitHub -->
+            <section data-background="img/coding-standards.jpg">
+                <h1>WPCS from GitHub</h1>
+                <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way.</p>
+                <p>Place them in suitable directory and make a note of the location. Mine are in: <strong>/Users/davetgreen/.wpcs</strong></p>
+            </section>
+            <!-- 7.3
  Decent code editor -->
-			<section data-background="img/typing.jpg">
-				<h1>A Code Editor / IDE</h1>
-				<div class="img-row">
-					<div class="img-col">
-						<img src="img/sublime.png" alt="Sublime Text" width="150" height="150" />
-						<small>Sublime</small>
-					</div>
-					<div class="img-col">
-						<img src="img/atom.png" alt="Atom Editor" width="150" height="150" />
-						<small>Atom</small>
-					</div>
-					<div class="img-col">
-						<img src="img/netbeans.png" alt="Netbeans" width="150" height="150" />
-						<small>Netbeans</small>
-					</div>
-					<div class="img-col">
-						<img src="img/phpstorm.jpg" alt="PHPStorm" width="150" height="139" />
-						<small>PHPStorm</small>
-					</div>
-					<div class="img-col">
-						<img src="img/coda.png" alt="Coda 2" width="150" height="150" />
-						<small>Coda</small>
-					</div>
-				</div>
-				<p>Or any decent code editor / IDE that either has a plugin ecosystem or native support for PHP Code Sniffer.</p>
-			</section>
-			<!-- 7.4 PHP Code Sniffer -->
-			<section data-background="img/plugin.jpg">
-				<h1>EDITOR SUPPORT</h1>
-				<p>Install and configure the relevant plugin for your code editor / IDE, or turn on and configure native support.</p>
-				<p>You will need to provide the path to the directory containing the WPCS rules you downloaded from GitHub.</p>
-			</section>
-			<!-- 8 Useful resources -->
-			<section>
-				<h2>Useful Resources</h2>
-				<ul>
-					<li>
-						<p>Core Handbook: Coding Standards
-							<a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/"><small>https://make.wordpress.org/core/handbook/best-practices/coding-standards/</small></a></p>
-					</li>
-					<li>
-						<p>GitHub: PHP_CodeSniffer
-							<a href="https://github.com/squizlabs/PHP_CodeSniffer#installation"><small>https://github.com/squizlabs/PHP_CodeSniffer#installation</small></a></p>
-					</li>
-					<li>
-						<p>GitHub: WordPress Coding Standards
-							<a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards"><small>https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards</small></a></p>
-					</li>
-					<li>
-						<p>Blog: Adding WPCS to your Code Editor
-							<a href="http://davetgreen.me/adding-wpcs-to-your-code-editor"><small>http://davetgreen.me/adding-wpcs-to-your-code-editor</small></a></p>
-					</li>
-				</ul>
-			</section>
-			<!-- 9. Closing remarks -->
-			<section>
-				<blockquote>
-					<p>Switching to WordPress Coding Standards has done more than anything else in recent memory to improve the overall quality of the WordPress code I write.
-						<br/>
-						<br/> I wish I'd switched earlier, and I encourage you to switch now to reap the benefits.</p>
-					<cite>Dave Green</cite>
-				</blockquote>
-			</section>
-			<!-- 10 Goodbye -->
-			<section>
-				<h1>Thank you!</h1>
-				<h3>Slides available at:<a href="http://davetgreen.me/wpcs-talk/">davetgreen.me/wpcs-talk</a></h3>
-				<h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
-			</section>
-		</div>
-		<!-- /.slides -->
-	</div>
-	<!-- /.reveal -->
-	<script src="lib/js/head.min.js"></script>
-	<script src="js/reveal.js"></script>
-	<script>
-	Reveal.initialize({
-		controls: true,
-		progress: true,
-		history: true,
-		center: true,
-		transition: 'fade',
-		dependencies: [{
-			src: 'lib/js/classList.js',
-			condition: function() {
-				return !document.body.classList;
-			}
-		}, {
-			src: 'plugin/markdown/marked.js',
-			condition: function() {
-				return !!document.querySelector('[data-markdown]');
-			}
-		}, {
-			src: 'plugin/markdown/markdown.js',
-			condition: function() {
-				return !!document.querySelector('[data-markdown]');
-			}
-		}, {
-			src: 'plugin/highlight/highlight.js',
-			async: true,
-			callback: function() {
-				hljs.initHighlightingOnLoad();
-			}
-		}, {
-			src: 'plugin/zoom-js/zoom.js',
-			async: true
-		}, {
-			src: 'plugin/notes/notes.js',
-			async: true
-		}]
-	});
-	</script>
+            <section data-background="img/typing.jpg">
+                <h1>A Code Editor / IDE</h1>
+                <div class="img-row">
+                    <div class="img-col">
+                        <img src="img/sublime.png" alt="Sublime Text" width="150" height="150" />
+                        <small>Sublime</small>
+                    </div>
+                    <div class="img-col">
+                        <img src="img/atom.png" alt="Atom Editor" width="150" height="150" />
+                        <small>Atom</small>
+                    </div>
+                    <div class="img-col">
+                        <img src="img/netbeans.png" alt="Netbeans" width="150" height="150" />
+                        <small>Netbeans</small>
+                    </div>
+                    <div class="img-col">
+                        <img src="img/phpstorm.jpg" alt="PHPStorm" width="150" height="139" />
+                        <small>PHPStorm</small>
+                    </div>
+                    <div class="img-col">
+                        <img src="img/coda.png" alt="Coda 2" width="150" height="150" />
+                        <small>Coda</small>
+                    </div>
+                </div>
+                <p>Or any decent code editor / IDE that either has a plugin ecosystem or native support for PHP Code Sniffer.</p>
+            </section>
+            <!-- 7.4 PHP Code Sniffer -->
+            <section data-background="img/plugin.jpg">
+                <h1>EDITOR SUPPORT</h1>
+                <p>Install and configure the relevant plugin for your code editor / IDE, or turn on and configure native support.</p>
+                <p>You will need to provide the path to the directory containing the WPCS rules you downloaded from GitHub.</p>
+            </section>
+            <!-- 8. Example -->
+            <section>
+            	<h1>Example</h1>
+            	<p>TBC screenshot/short video here.</p>
+            </section>
+            <!-- 9. Useful resources -->
+            <section>
+                <h2>Useful Resources</h2>
+                <ul>
+                    <li>
+                        <p>Core Handbook: Coding Standards
+                            <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/"><small>https://make.wordpress.org/core/handbook/best-practices/coding-standards/</small></a></p>
+                    </li>
+                    <li>
+                        <p>GitHub: PHP_CodeSniffer
+                            <a href="https://github.com/squizlabs/PHP_CodeSniffer#installation"><small>https://github.com/squizlabs/PHP_CodeSniffer#installation</small></a></p>
+                    </li>
+                    <li>
+                        <p>GitHub: WordPress Coding Standards
+                            <a href="https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards"><small>https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards</small></a></p>
+                    </li>
+                    <li>
+                        <p>Blog: Adding WPCS to your Code Editor
+                            <a href="http://davetgreen.me/adding-wpcs-to-your-code-editor"><small>http://davetgreen.me/adding-wpcs-to-your-code-editor</small></a></p>
+                    </li>
+                </ul>
+            </section>
+            <!-- 10. Closing remarks -->
+            <section>
+                <blockquote>
+                    <p>Switching to WordPress Coding Standards has done more than anything else in recent memory to improve the overall quality of the WordPress code I write.
+                        <br/>
+                        <br/> I wish I'd switched earlier, and I encourage you to switch now and reap the benefits.</p>
+                    <cite>Dave Green</cite>
+                </blockquote>
+            </section>
+            <!-- 10.1 Goodbye -->
+            <section>
+                <h1>Thank you!</h1>
+                <h3>Slides available at:<a href="http://davetgreen.me/wpcs-talk/">davetgreen.me/wpcs-talk</a></h3>
+                <h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
+            </section>
+        </div>
+        <!-- /.slides -->
+    </div>
+    <!-- /.reveal -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'fade',
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
 </body>
 
 </html>
