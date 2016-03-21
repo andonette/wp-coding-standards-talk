@@ -123,78 +123,80 @@
             </section>
             <!-- 6. 10 Benefits of switching -->
             <section>
-                <h1>10 Benefits of Switching to <span>WPCS</span></h1>
+                <h1>10 Benefits of Switching to <span>WPCS</span> when Writing Code</h1>
             </section>
             <!-- 6.1 -->
             <section data-background="img/stress.jpg">
                 <h1>Reduced Stress</h1>
-                <h2>No more inner debates about <span>how</span> you write your code: just stick to the standards.</h2>
+                <h2>No more worrying about how you should write code. <span>Less stress = more code</span></h2>
             </section>
             <!-- 6.2 -->
             <section data-background="img/reading.jpg">
-                <h1>Easier to Read</h1>
-                <h2>Due to good use of <span>spacing</span>, <span>indentation</span> and <span>braces</span>.</h2>
+                <h1>Readable Code</h1>
+                <h2>Due to consistent use of <span>spacing</span>, <span>indentation</span>, <span>braces</span> and <span>naming conventions</span></h2>
             </section>
             <!-- 6.3 -->
-            <section>
-                <h1>Consistent Naming</h1>
-                <h2>Naming conventions for <span>variables</span>, <span>constants</span>, <span>functions</span>, <span>classes</span> and <span>files</span>.</h2>
+            <section data-background="img/database.jpg">
+                <h1>Better Querying</h1>
+                <h2>Touching the database directly is discouraged in favour of the <span>Query APIs</span></h2>
             </section>
             <!-- 6.4 -->
-            <section>
-                <h1>#4 - Benefit Title</h1>
+            <section data-background="img/deprecated.jpg">
+                <h1>Future Proof Code</h1>
+                <h2>Avoid <span>deprecated</span> functions and use <span>new</span> or <span>alternative</span> functions instead</h2>
             </section>
             <!-- 6.5 -->
             <section data-background="img/team.jpg">
                 <h1>Good for Teams</h1>
-                <h2>All of your code will look like it was written by a <span>single person</span>.</h2>
+                <h2>Project code <span>looks the same</span>, regardless of <span>who</span> wrote it or <span>when</span> it was written</h2>
             </section>
             <!-- 6.6 -->
-            <section>
-                <h1>#6 - Benefit Title</h1>
+            <section data-background="img/bugs.jpg">
+                <h1>Faster Debugging</h1>
+                <h2>Bugs are <span>quicker to find &amp; fix</span> if the code you've written is <span>easy to read &amp; understand</span></h2>
             </section>
-            <!-- 6.7 -->
-            <section data-background="img/documentation.jpg">
-                <h1>Better Inline Documentation</h1>
-                <h2>Of a <span>higher quality</span> and far more <span>comprehensive</span>.</h2>
-            </section>
-            <!-- 6.8 -->
-            <section data-background="img/security.jpg">
-                <h1>More Secure Code</h1>
-                <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span>.</h1>
-            </section>
-            <!-- 6.9 Avoid Buggy Code -->
+			<!-- 6.7 Avoid Buggy Code -->
             <section data-background="img/yoda.jpg">
                 <h2>Avoid Pesky Bugs, You Shall</h2>
-                <p>Using <strong>"Yoda"</strong>, rather than regular conditions means that if you accidentally omit an equal sign, a variable cannot be set to the value of what you are comparing it against.</p>
+                <p>Using <strong>"Yoda"</strong>, rather than regular conditions means that if you accidentally omit an equal sign, a variable cannot be set to the value of what you are comparing it against</p>
                 <pre><code>if ( 'strong' == $force ) {
     $victorious = you_will( $be );
 }</code></pre>
                 <p>Removing an equal sign from the condition would result in a parse error <strong>instead</strong> of the condition evaluating to true!</p>
             </section>
+            <!-- 6.8 -->
+            <section data-background="img/documentation.jpg">
+                <h1>Better Inline Docs</h1>
+                <h2>Standards encourage more <span>detailed</span> and <span>comprehensive</span> documentation of your code</h2>
+            </section>
+            <!-- 6.9 -->
+            <section data-background="img/security.jpg">
+                <h1>More Secure Code</h1>
+                <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span> of the input &amp; output data.</h1>
+            </section>
             <!-- 6.10 -->
-            <section>
-                <h1>#10 - Benefit Title</h1>
+            <section data-background="img/future.jpg">
+                <h1>Easier to Maintain</h1>
+                <h2><span>Anyone</span> can jump in and modify the code now or even years into the <span>future</span>.</h2>
             </section>
             <!-- 7. Making the switch -->
             <section data-background="img/switch.jpg">
                 <h1>Making the Switch</h1>
-                <h2>Automatically check your PHP as you write it.</h2>
+                <h2>Automatically check your PHP as you write it</h2>
             </section>
             <!-- 7.1 PHP Code Sniffer -->
             <section data-background="img/sniffing.jpg">
                 <h1>PHP Code Sniffer</h1>
-                <p>Install PHPCS on your machine using <strong>PEAR</strong> or <strong>Composer</strong>. Alternatively, use <strong>Homebrew</strong> if you are an OSX user.</p>
-                <p>Add the path to your <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
+                <p>Install PHPCS on your machine using <strong>PEAR</strong> or <strong>Composer</strong>. Alternatively, use <strong>Homebrew</strong> if you are an OSX user</p>
+                <p>Add the path to your <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation</p>
             </section>
             <!-- 7.2 WPCS from GitHub -->
             <section data-background="img/coding-standards.jpg">
                 <h1>WPCS from GitHub</h1>
-                <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way.</p>
+                <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way</p>
                 <p>Place them in suitable directory and make a note of the location. Mine are in: <strong>/Users/davetgreen/.wpcs</strong></p>
             </section>
-            <!-- 7.3
- Decent code editor -->
+            <!-- 7.3 Decent code editor -->
             <section data-background="img/typing.jpg">
                 <h1>A Code Editor / IDE</h1>
                 <div class="img-row">
