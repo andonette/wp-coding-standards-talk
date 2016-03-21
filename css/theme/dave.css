@@ -181,6 +181,10 @@ body {
   color: #E7AD52;
 }
 
+.reveal h1 span.php {
+  color: #e040fb;
+}
+
 .reveal h1 {
   font-size: 2.5em;
 }
