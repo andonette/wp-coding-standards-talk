@@ -66,6 +66,9 @@
                     <li class="fragment">
                         <p>Switched for <strong>PHP</strong> coding in <strong>September 2015</strong>.</p>
                     </li>
+                    <li class="fragment">
+                        <p>About to make the switch for writing <strong>Javascript</strong>.</p>
+                    </li>
                 </ul>
             </section>
             <!-- 4. What they are -->
@@ -77,6 +80,10 @@
                 <h1>Rules your code should <span>conform</span> to, and will be <span>checked</span> against.</h1>
             </section>
             <!-- 4.2 Four standards -->
+            <section data-background="img/wordpress.jpg">
+                <h1>Developed for wordpress <span>core</span>, official <span>themes</span> and <span>plugins</span>.</h1>
+            </section>
+            <!-- 4.3 Four standards -->
             <section data-background="img/code.jpg">
                 <h1>Four language specific standards</h1>
                 <ul class="lang-list">
@@ -85,17 +92,24 @@
                     <li class="css"><span>CSS</span></li>
                     <li class="javascript"><span>JS</span></li>
                 </ul>
-                <h4><span class="gold">Accessibility (WCAG)</span> Standards just landed!</h4>
-            </section>
-            <!-- 4.3 -->
-            <section data-background="img/wordpress.jpg">
-                <h1>Developed for wordpress <span>core</span>, official <span>themes</span> and <span>plugins</span>.</h1>
             </section>
             <!-- 4.4 -->
-            <section data-background="img/community.jpg">
-                <h1>Written by the community, for the community.</h1>
+            <section data-background="img/accessibility.jpg">
+                <h1>Accessibility Coding Standards</h1>
+                <h3>Approved for inclusion in the <br/><span>Core Handbook</span> and announced to the communty in <span>March 2016</span>.</h3>
             </section>
             <!-- 4.5 -->
+            <section data-background="img/accessibility.jpg">
+                <blockquote>
+                    <p class="large">All new or updated code released in WordPress must conform with the WCAG 2.0 guidelines at level AA. </p>
+                    <cite class="large"><strong>Core Handbook</strong></cite>
+                </blockquote>
+            </section>
+            <!-- 4.6 -->
+            <section data-background="img/community.jpg">
+                <h1>Written <span>by</span> the community, <span>for</span> the community.</h1>
+            </section>
+            <!-- 4.7 -->
             <section data-background="img/calendar.jpg">
                 <h1>Have existed in some form or other since <span class="gold">2009</span>.</h1>
             </section>
@@ -125,13 +139,14 @@
                 <h1><span>Not</span> going to add more complexity to your code.</h1>
             </section>
             <!-- 6. 10 Benefits of switching -->
-            <section>
+            <section data-background="img/happy.jpg">
                 <h1>10 Benefits of Switching to <span>WPCS</span></h1>
+                <h3>(there are many more!)</h3>
             </section>
             <!-- 6.1 -->
             <section data-background="img/stress.jpg">
                 <h1>Reduced Stress</h1>
-                <h2>No more worrying about how you should write code. <span>Less stress = more code</span></h2>
+                <h2>No more worrying about how you should write code. <span>Less stress = more code :)</span></h2>
             </section>
             <!-- 6.2 -->
             <section data-background="img/reading.jpg">
@@ -159,6 +174,32 @@
                 <h2>Evaluate expressions using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
 <pre><code>if ( 'constant' == $variable ) {</code></pre>
             </section>
+
+            <section data-background="img/yoda.jpg">
+            <h2>The common approach</h2>
+<pre class="large"><code>if ( $variable == 'constant' ) {
+    $force = 'will be with you';
+}</code></pre>
+    <p>We're checking to see if the variable is equal to the constant. In this case the conditional is <strong>truthy</strong>.</p>
+            </section>
+
+            <section data-background="img/yoda.jpg">
+                <h2>Make mistakes, you will</h2>
+<pre class="large"><code>// Ooops, we lost an equals!
+if ( $variable = 'constant' ) {
+    $force = 'will be with you';
+}</code></pre>
+<p>Ommitting the second equals sign means that this conditional <strong>silently</strong> resolves as <strong>truthy</strong> and is a bug!</p>
+            </section>
+
+            <section data-background="img/yoda.jpg">
+                <h2>Reverse it, you shall</h2>
+<pre class="large"><code>if ( 'constant' == $variable ) {
+    $force = 'will be with you';
+}</code></pre>
+<p>By <strong>reversing</strong> the statement, an ommission of an equals sign will <strong>produce an error</strong> which means you can quickly fix the bug and move on instead of scratching your head!</p>
+            </section>
+
             <!-- 6.7 -->
             <section data-background="img/documentation.jpg">
                 <h1>Better Inline Docs</h1>
@@ -230,6 +271,10 @@
                 <p>Set-up the plugin or native support for <strong>PHPCS</strong> accordingly. You will need the path to the directory containing the <strong>WPCS</strong> rules you downloaded from GitHub.</p>
                 <p>There are a number of options available such as checking on save, changing the way errors are displayed and even automatically fixing problems in some cases!</p>
             </section>
+            <!-- 7.5 Command Line -->
+            <section data-background="img/command-line.jpg">
+                <h1>Command Line</h1>
+            </section>
             <!-- 8. Example -->
             <section>
             	<!-- <h1>Quick Example</h1> -->
@@ -237,19 +282,20 @@
 if($force == "with you") {
  $victorious = you_will($be);
 }</code></pre>
-<ul>
-<li class="fragment"><p>Inline comments must end in full stops.</p></li>
-<li class="fragment"><p>Expected 1 space after IF keyword.</p></li>
-<li class="fragment"><p>No space after opening parenthesis is prohibited.</p></li>
-<li class="fragment"><p>Use Yoda Condition checks, you must.</p></li>
-<li class="fragment"><p>No space before closing parenthesis is prohibited.</p></li>
-<li class="fragment"><p>Expecting one spaces before closing bracket: 0 found.</p></li>
+<ul class="narrow">
+<li class="fragment"><p class="small">Inline comments must end in full stops.</p></li>
+<li class="fragment"><p class="small">Expected 1 space after IF keyword.</p></li>
+<li class="fragment"><p class="small">No space after opening parenthesis is prohibited.</p></li>
+<li class="fragment"><p class="small">Use Yoda Condition checks, you must.</p></li>
+<li class="fragment"><p class="small">No space before closing parenthesis is prohibited.</p></li>
+<li class="fragment"><p class="small">Line indented correctly; expected 1 tabs, found 0.</p></li>
+<li class="fragment"><p class="small">Expecting one spaces before closing bracket: 0 found.</p></li>
 </ul>
             </section>
 
             <section>
             <h1>Before</h1>
-<pre><code>// A quick example
+<pre class="small"><code>// A quick example
 if($force == "with you") {
  $victorious = you_will($be);
 }</code></pre>
@@ -258,7 +304,7 @@ if($force == "with you") {
             <section>
 
             <h1>After</h1>
-<pre><code>// A quick example.
+<pre class="small"><code>// A quick example.
 if ( $force == 'with you' ) {
     $victorious = you_will( $be );
 }</code></pre>
