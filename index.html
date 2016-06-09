@@ -207,6 +207,7 @@ if ( $variable = 'constant' ) {
             </section>
 
             <section data-background="img/documentation.jpg">
+            <h2>File documentation</h2>
 <pre class="small"><code>/**
  * A description of what purpose this
  * file serves in the theme/plugin.
@@ -216,6 +217,7 @@ if ( $variable = 'constant' ) {
             </section>
 
             <section data-background="img/documentation.jpg">
+                <h2>Function documentation</h2>
 <pre class="small"><code>/**
  * Describe the function's purpose.
  * @param  int    $id    Post ID.
@@ -229,6 +231,47 @@ function do_something( $id, $args ) {</code></pre>
                 <h1>More Secure Code</h1>
                 <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span> of both input &amp; output data.</h1>
             </section>
+
+            <section data-background="img/security.jpg">
+                <h2>Validating Input</h2>
+
+                <p>Here we check to see if the input variable is a <strong>string</strong> as expected, not a <strong>integer</strong>, before adding it to an array.</p>
+
+<pre class="xsmall"><code>$things = array();
+if ( isset( $_POST['foo'] ) {
+    $foo = $_POST['foo'];
+
+    if ( 'string' === gettype( $foo ) ) {
+        $things[] = $foo;
+    }
+}
+</code></pre>
+            </section>
+
+            <section data-background="img/security.jpg">
+                <h2>Sanitizing Input</h2>
+
+                <p>Here we properly sanitize an input variable before using it to update post meta.</p>
+<pre class="xsmall"><code>if ( isset( $_POST['foo'] ) {
+    $foo = sanitize_text_field( $_POST['foo'] );
+
+    update_post_meta( $id, 'foo_meta', $foo );
+}
+</code></pre>
+            </section>
+
+            <section data-background="img/security.jpg">
+                <h2>Escaping output</h2>
+
+                <p>Here we output a sanitized input variable, making sure it has been properly escaped.</p>
+<pre class="xsmall"><code>if ( isset( $_POST['foo'] ) {
+    $foo = sanitize_text_field( $_POST['foo'] );
+    echo '<h1>' . esc_html( $foo ) . '</h1>';
+}
+</code></pre>
+
+            </section>
+
             <!-- 6.9 -->
             <section data-background="img/database.jpg">
                 <h1>Better DB Queries</h1>
@@ -293,6 +336,10 @@ function do_something( $id, $args ) {</code></pre>
             <!-- 7.5 Command Line -->
             <section data-background="img/command-line.jpg">
                 <h1>Command Line</h1>
+
+                <h2>You can run <span>PHPCS</span> manually, or as part of your build workflow by calling it directly in your scripts or using plugins for <span>Grunt</span>, <span>Gulp</span> etc.</h2>
+
+
             </section>
             <!-- 8. Example -->
             <section>
@@ -328,9 +375,9 @@ if ( $force == 'with you' ) {
     $victorious = you_will( $be );
 }</code></pre>
             </section>
-            <!-- 9. Useful resources -->
+            <!-- 9. Some Advice -->
             <section>
-            <h1>Recap</h1>
+            <h1>Some Advice</h1>
 
             </section>
 

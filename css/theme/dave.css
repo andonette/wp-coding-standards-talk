@@ -416,6 +416,10 @@ body {
   font-size: 1em;
 }
 
+.reveal pre.xsmall {
+  font-size: 0.8em;
+}
+
 .reveal pre.large {
   font-size: 1.2em;
 }
