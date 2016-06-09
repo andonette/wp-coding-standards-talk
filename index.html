@@ -235,7 +235,7 @@ function do_something( $id, $args ) {</code></pre>
             <section data-background="img/security.jpg">
                 <h2>Validating Input</h2>
 
-                <p>Here we check to see if the input variable is a <strong>string</strong> as expected, not a <strong>integer</strong>, before adding it to an array.</p>
+                <p>Here we check to see if the input variable is a <strong>string</strong> as expected, before adding it to an array.</p>
 
 <pre class="xsmall"><code>$things = array();
 if ( isset( $_POST['foo'] ) {
@@ -333,11 +333,14 @@ if ( isset( $_POST['foo'] ) {
                 <p>Set-up the plugin or native support for <strong>PHPCS</strong> accordingly. You will need the path to the directory containing the <strong>WPCS</strong> rules you downloaded from GitHub.</p>
                 <p>There are a number of options available such as checking on save, changing the way errors are displayed and even automatically fixing problems in some cases!</p>
             </section>
+            <section>
+            <h1>Alternatively...</h1>
+            </section>
             <!-- 7.5 Command Line -->
             <section data-background="img/command-line.jpg">
                 <h1>Command Line</h1>
 
-                <h2>You can run <span>PHPCS</span> manually, or as part of your build workflow by calling it directly in your scripts or using plugins for <span>Grunt</span>, <span>Gulp</span> etc.</h2>
+                <h2>Run <span>PHPCS</span> directly from the command line, reference it in your automated scripts or run it in a build workflow using <span>Grunt</span>, <span>Gulp</span> etc.</h2>
 
 
             </section>
@@ -378,7 +381,14 @@ if ( $force == 'with you' ) {
             <!-- 9. Some Advice -->
             <section>
             <h1>Some Advice</h1>
-
+                <ul>
+                    <li class="fragment"><p><strong>Don't</strong> try to switch for all languages/standards at once.</p></li>
+                    <li class="fragment"><p><strong>Gradually</strong> increase the amount of rules you comply with.</p></li>
+                    <li class="fragment"><p><strong>Don't</strong> be afraid of making mistakes: it's part of the process.</p></li>
+                    <li class="fragment"><p><strong>Get help</strong> with the initial set-up if needed: it's worth it.</p></li>
+                    <li class="fragment"><p><strong>Don't</strong> let coding standards get in the way of productivity.</p></li>
+                    <li class="fragment"><p><strong>Encourage</strong> other WordPress developers to switch!</p></li>
+                </ul>
             </section>
 
             <!-- 10. Useful resources -->
@@ -387,7 +397,11 @@ if ( $force == 'with you' ) {
                 <ul>
                     <li>
                         <p>Core Handbook: Coding Standards
-                            <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/"><small>https://make.wordpress.org/core/handbook/best-practices/coding-standards/</small></a></p>
+                            <a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/"><small>https://make.wordpress.org/core/handbook/best-practices/coding-standards</small></a></p>
+                    </li>
+                    <li>
+                        <p>Validating Sanitizing and Escaping User Data
+                            <a href="https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data/"><small>https://codex.wordpress.org/Validating_Sanitizing_and_Escaping_User_Data</small></a></p>
                     </li>
                     <li>
                         <p>GitHub: PHP_CodeSniffer
