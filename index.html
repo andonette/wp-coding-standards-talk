@@ -37,7 +37,7 @@
             <!-- 2. Personal introduction -->
             <section data-background="img/dave.jpg">
                 <h1>Dave Green</h1>
-                <h3>Senior Front-end &amp; WordPress Engineer at <span style="color: #2cc795;">Make Do</span></h3>
+                <h3>Senior Developer at <span style="color: #2cc795;">Make Do</span></h3>
                 <h3><a href="https://davetgreen.me">davetgreen.me</a></h3>
                 <h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
             </section>
@@ -45,25 +45,25 @@
             <section data-background="img/story.jpg">
                 <h1>My Story</h1>
                 <ul>
-                    <li>
+                    <li class="fragment">
                         <p>Have used <strong>PSR2</strong> standards in the past.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p><strong>OCD</strong> when it comes to all things digital.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p>Work on more <strong>team</strong> projects than ever.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p>Recently moved into writing <strong>plugins</strong>.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p>Trying to <strong>contribute</strong> more to core.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p>Make Do work with a lot of <strong>other agencies</strong>.</p>
                     </li>
-                    <li>
+                    <li class="fragment">
                         <p>Switched for <strong>PHP</strong> coding in <strong>September 2015</strong>.</p>
                     </li>
                 </ul>
@@ -235,18 +235,41 @@
             	<!-- <h1>Quick Example</h1> -->
 <pre><code>// A quick example
 if($force == "with you") {
-    $victorious = you_will($be);
+ $victorious = you_will($be);
 }</code></pre>
 <ul>
-<li><p>Inline comments must end in full stops.</p></li>
-<li><p>Expected 1 space after IF keyword.</p></li>
-<li><p>No space after opening parenthesis is prohibited.</p></li>
-<li><p>Use Yoda Condition checks, you must.</p></li>
-<li><p>No space before closing parenthesis is prohibited.</p></li>
-<li><p>Expecting one spaces before closing bracket: 0 found.</p></li>
+<li class="fragment"><p>Inline comments must end in full stops.</p></li>
+<li class="fragment"><p>Expected 1 space after IF keyword.</p></li>
+<li class="fragment"><p>No space after opening parenthesis is prohibited.</p></li>
+<li class="fragment"><p>Use Yoda Condition checks, you must.</p></li>
+<li class="fragment"><p>No space before closing parenthesis is prohibited.</p></li>
+<li class="fragment"><p>Expecting one spaces before closing bracket: 0 found.</p></li>
 </ul>
             </section>
+
+            <section>
+            <h1>Before</h1>
+<pre><code>// A quick example
+if($force == "with you") {
+ $victorious = you_will($be);
+}</code></pre>
+            </section>
+
+            <section>
+
+            <h1>After</h1>
+<pre><code>// A quick example.
+if ( $force == 'with you' ) {
+    $victorious = you_will( $be );
+}</code></pre>
+            </section>
             <!-- 9. Useful resources -->
+            <section>
+            <h1>Recap</h1>
+
+            </section>
+
+            <!-- 10. Useful resources -->
             <section>
                 <h1>Useful Resources</h1>
                 <ul>
@@ -264,7 +287,7 @@ if($force == "with you") {
                     </li>
                 </ul>
             </section>
-            <!-- 10. Closing remarks -->
+            <!-- 11. Closing remarks -->
             <section>
                 <blockquote>
                     <p>Switching to <strong>WordPress Coding Standards</strong> has done more than anything else in recent memory to improve the overall quality of the WordPress code I write.
@@ -273,7 +296,7 @@ if($force == "with you") {
                     <cite>Dave Green</cite>
                 </blockquote>
             </section>
-            <!-- 10.1 Goodbye -->
+            <!-- 11.1 Goodbye -->
             <section>
                 <h1>Thank you!</h1>
                 <h3>Slides available at:<a href="http://davetgreen.me/wpcs-talk/">davetgreen.me/wpcs-talk</a></h3>
