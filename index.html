@@ -301,6 +301,34 @@ if ( isset( $_POST['foo'] ) {
                 <h2>Avoid using <span>WPDB</span> for custom database queries in favour of the <span>WordPress API</span>.</h2>
                 <p>(Caching and performance optimisation FTW!)</p>
             </section>
+
+            <!-- 6.9 -->
+            <section data-background="img/database.jpg">
+                <h2>Example: The <span class="gold">WPDB</span> Way</h2>
+                <p>Lets get all posts with an ID less than <strong>99</strong>.</p>
+<pre class="small"><code>global $wpdb;
+$posts = $wpdb->get_results(
+    "SELECT *
+    FROM $wpdb->posts
+    WHERE `id` < 99",
+    OBJECT
+);
+</code></pre>
+            </section>
+
+            <!-- 6.9 -->
+            <section data-background="img/database.jpg">
+                <h2>Example: The <span class="gold">WP API</span> Way</h2>
+                <p>Pass an array of IDs into a new <strong>WP_Query</strong> and voila!</p>
+
+<pre class="small"><code>$ids = range(1, 98);
+$args = array(
+    'post__in' => $ids
+);
+$myquery = new WP_Query( $args )
+</code></pre>
+            </section>
+
             <!-- 6.10 -->
             <section data-background="img/future.jpg">
                 <h1>Easier to Maintain</h1>
@@ -374,7 +402,7 @@ if ( isset( $_POST['foo'] ) {
             <!-- 8. Example -->
             <section>
             	<!-- <h1>Quick Example</h1> -->
-<pre><code>// A quick example
+<pre class="small"><code>// A quick example
 if($force == "with you") {
  $victorious = you_will($be);
 }</code></pre>
@@ -383,6 +411,7 @@ if($force == "with you") {
 <li class="fragment"><p class="small">Expected 1 space after IF keyword.</p></li>
 <li class="fragment"><p class="small">No space after opening parenthesis is prohibited.</p></li>
 <li class="fragment"><p class="small">Use Yoda Condition checks, you must.</p></li>
+<li class="fragment"><p class="small">String "with you" does not require double quotes.</p></li>
 <li class="fragment"><p class="small">No space before closing parenthesis is prohibited.</p></li>
 <li class="fragment"><p class="small">Line indented correctly; expected 1 tabs, found 0.</p></li>
 <li class="fragment"><p class="small">Expecting one spaces before closing bracket: 0 found.</p></li>
@@ -401,7 +430,7 @@ if($force == "with you") {
 
             <h1>After</h1>
 <pre class="small"><code>// A quick example.
-if ( $force == 'with you' ) {
+if ( 'with you' == $force ) {
     $victorious = you_will( $be );
 }</code></pre>
             </section>
@@ -411,9 +440,9 @@ if ( $force == 'with you' ) {
                 <ul>
                     <li class="fragment"><p><strong>Don't</strong> try to switch for all languages/standards at once.</p></li>
                     <li class="fragment"><p><strong>Gradually</strong> increase the amount of rules you comply with.</p></li>
-                    <li class="fragment"><p><strong>Don't</strong> be afraid of making mistakes: it's part of the process.</p></li>
+                    <li class="fragment"><p><strong>Mistakes</strong> are going to be made, it's part of the process.</p></li>
                     <li class="fragment"><p><strong>Get help</strong> with the initial set-up if needed: it's worth it.</p></li>
-                    <li class="fragment"><p><strong>Don't</strong> let coding standards get in the way of productivity.</p></li>
+                    <li class="fragment"><p><strong>Productivity</strong> is key, don't let standards get in the way.</p></li>
                     <li class="fragment"><p><strong>Encourage</strong> other WordPress developers to switch!</p></li>
                 </ul>
             </section>
@@ -454,6 +483,11 @@ if ( $force == 'with you' ) {
                 <h1>Thank you!</h1>
                 <h3>Slides available at:<a href="http://davetgreen.me/wpcs-talk/">davetgreen.me/wpcs-talk</a></h3>
                 <h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
+            </section>
+
+            <!-- 12 Questions -->
+            <section>
+                <h1>Questions?</h1>
             </section>
         </div>
         <!-- /.slides -->
