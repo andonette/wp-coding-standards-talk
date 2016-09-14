@@ -150,7 +150,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['css', 'js']);
 
     // JS task
-    grunt.registerTask('js', ['jshint', 'uglify']);
+    grunt.registerTask('js', ['uglify']);
 
     // Theme CSS
     grunt.registerTask('css-themes', ['sass:themes']);

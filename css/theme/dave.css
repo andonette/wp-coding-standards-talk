@@ -421,7 +421,7 @@ body {
 }
 
 .reveal pre.large {
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 
 .reveal code {
@@ -645,4 +645,23 @@ body {
 
 .reveal small code {
   vertical-align: baseline;
+}
+
+.no-trans:before {
+  display: none;
+}
+
+.make-do-logo {
+  width: 100%;
+}
+
+.reveal .slide-background[data-background-hash^=img]::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
