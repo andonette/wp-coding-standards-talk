@@ -168,7 +168,7 @@
             </section>
             <!-- 6.3 -->
             <section data-background="img/team.jpg">
-                <h1>Good for Teams</h1>
+                <h1>Great for Teams</h1>
                 <h2>All code <span>looks the same</span>, regardless of <span>who</span> wrote it or <span>when</span> it was written, with <span>no fingerprints</span>.</h2>
             </section>
             <!-- 6.4 -->
@@ -184,14 +184,15 @@
 			<!-- 6.6 Avoid Buggy Code -->
             <section data-background="img/yoda.jpg">
                 <h1>Avoid Pesky Bugs</h1>
-                <h2>Evaluate conditionals using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
+                <h2>Evaluate expressions using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
 <pre><code>if ( 'literal' == $variable ) {</code></pre>
 <pre><code>if ( true == $variable ) {</code></pre>
             </section>
 
             <section data-background="img/yoda.jpg">
             <h2>The common approach</h2>
-<pre><code>if ( $variable == 'wpcs' ) {
+<pre><code>$variable = 'wpcs';
+if ( $variable == 'wpcs' ) {
     $result = 'Huzzah!';
 }</code></pre>
     <p>Here we're checking to see if the variable is equal to the string literal. In this case the condition is <strong>truthy</strong>, and we get the result we're expecting.</p>
@@ -199,7 +200,8 @@
 
             <section data-background="img/yoda.jpg">
                 <h2>Make mistakes, you will</h2>
-<pre><code>// Ooops, we lost an equals!
+<pre><code>$variable = 'ooops!';
+// Ooops, we lost an equals!
 if ( $variable = 'wpcs' ) {
     $result = 'Huzzah!';
 }</code></pre>
@@ -208,11 +210,11 @@ if ( $variable = 'wpcs' ) {
 
             <section data-background="img/yoda.jpg">
                 <h2>Reverse it, you shall</h2>
-<pre><code>
+<pre><code>$variable = 'ooops!';
 if ( 'wpcs' == $variable ) {
     $result = 'Huzzah!';
 }</code></pre>
-<p>By <strong>reversing</strong> the statement, an ommission of an equals sign will <strong>produce an error</strong> that you can fix immediately!</p>
+<p>By <strong>reversing</strong> the expression, an ommission of an equals sign will <strong>produce an error</strong> that you can fix immediately!</p>
             </section>
 
             <section data-background="img/yoda.jpg">
@@ -304,7 +306,7 @@ if ( isset( $_POST['foo'] ) {
 
             <!-- 6.9 -->
             <section data-background="img/database.jpg">
-                <h2>Example: The <span class="gold">WPDB</span> Way</h2>
+                <h2>The <span class="gold">WPDB</span> Way</h2>
                 <p>Lets get all posts with an ID less than <strong>99</strong>.</p>
 <pre class="small"><code>global $wpdb;
 $posts = $wpdb->get_results(
@@ -318,12 +320,12 @@ $posts = $wpdb->get_results(
 
             <!-- 6.9 -->
             <section data-background="img/database.jpg">
-                <h2>Example: The <span class="gold">WP API</span> Way</h2>
+                <h2>The <span class="gold">WP API</span> Way</h2>
                 <p>Pass an array of IDs into a new <strong>WP_Query</strong> and voila!</p>
 
 <pre class="small"><code>$ids = range(1, 98);
 $args = array(
-    'post__in' => $ids
+    'post__in' => $ids,
 );
 $myquery = new WP_Query( $args )
 </code></pre>
@@ -394,13 +396,18 @@ $myquery = new WP_Query( $args )
             <section data-background="img/command-line.jpg">
                 <h1>Command Line</h1>
 
-                <h2>Run <span>PHPCS</span> directly from the command line, reference it in your automated scripts or run it in a build workflow using <span>Grunt</span>, <span>Gulp</span> etc.</h2>
+                <h2>Run <span>PHPCS</span> directly from the command line, using it only when you need to.</h2>
             </section>
-            <section data-background="img/phpcs-command-line.jpg" class="no-trans">
+            <section class="no-trans" data-background="img/phpcs-command-line.jpg">
 
             </section>
+            <section data-background="img/command-line.jpg">
+                <h1>Workflow</h1>
+
+                <h2>Automate the use of <span>PHPCS</span> as part of your build processes using <span>Grunt</span>, <span>Gulp</span> etc.</h2>
+            </section>
             <!-- 8. Example -->
-            <section>
+            <section class="no-trans">
             	<!-- <h1>Quick Example</h1> -->
 <pre class="small"><code>// A quick example
 if($force == "with you") {
@@ -419,7 +426,7 @@ if($force == "with you") {
             </section>
 
             <section>
-            <h1>Before</h1>
+            <h1>Before <span>WPCS</span></h1>
 <pre class="small"><code>// A quick example
 if($force == "with you") {
  $victorious = you_will($be);
@@ -428,7 +435,7 @@ if($force == "with you") {
 
             <section>
 
-            <h1>After</h1>
+            <h1>After <span>WPCS</span></h1>
 <pre class="small"><code>// A quick example.
 if ( 'with you' == $force ) {
     $victorious = you_will( $be );
