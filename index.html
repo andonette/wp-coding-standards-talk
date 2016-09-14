@@ -123,7 +123,7 @@
                 <h1>Have existed in some form or other since <span class="gold">2009</span>.</h1>
             </section>
             <!-- 4.8 -->
-            <section data-background="img/evolution.jpg">
+            <section data-background="img/growth.jpg">
                 <h1>A set of standards that will <span class="gold">grow</span> and <span class="gold">evolve</span> with WordPress.</h1>
             </section>
             <!-- 5. What are they are NOT -->
@@ -132,7 +132,7 @@
             </section>
             <!-- 5.1 The Hardcore -->
             <section data-background="img/albert.jpg">
-                <h1><span>Not</span> just for the hardcore.</h1>
+                <h1><span>Not</span> just for the hardcore or rockstar types.</h1>
             </section>
             <!-- 5.2  Core Contributors -->
             <section data-background="img/contributors.jpg">
@@ -174,7 +174,7 @@
             <!-- 6.4 -->
             <section data-background="img/deprecated.jpg">
                 <h1>Future Proofing</h1>
-                <h2>Avoid <span>deprecated</span> functions and use <span>alternatives</span> to avoid potential issues.</h2>
+                <h2>Avoid using <span>deprecated</span> functions to prevent potentially major issues.</h2>
             </section>
             <!-- 6.5 -->
             <section data-background="img/bugs.jpg">
@@ -184,33 +184,43 @@
 			<!-- 6.6 Avoid Buggy Code -->
             <section data-background="img/yoda.jpg">
                 <h1>Avoid Pesky Bugs</h1>
-                <h2>Evaluate expressions using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
-<pre><code>if ( 'constant' == $variable ) {</code></pre>
+                <h2>Evaluate conditionals using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
+<pre><code>if ( 'literal' == $variable ) {</code></pre>
+<pre><code>if ( true == $variable ) {</code></pre>
             </section>
 
             <section data-background="img/yoda.jpg">
             <h2>The common approach</h2>
-<pre><code>if ( $variable == 'constant' ) {
-    $force = 'will be with you';
+<pre><code>if ( $variable == 'wpcs' ) {
+    $result = 'Huzzah!';
 }</code></pre>
-    <p>We're checking to see if the variable is equal to the constant. In this case the conditional is <strong>truthy</strong>.</p>
+    <p>Here we're checking to see if the variable is equal to the string literal. In this case the condition is <strong>truthy</strong>, and we get the result we're expecting.</p>
             </section>
 
             <section data-background="img/yoda.jpg">
                 <h2>Make mistakes, you will</h2>
 <pre><code>// Ooops, we lost an equals!
-if ( $variable = 'constant' ) {
-    $force = 'will be with you';
+if ( $variable = 'wpcs' ) {
+    $result = 'Huzzah!';
 }</code></pre>
-<p>Ommitting the second equals sign means that this conditional <strong>silently</strong> resolves as <strong>truthy</strong> and is a bug!</p>
+<p>Ommitting the second equals sign means that this conditional <strong>silently</strong> resolves as <strong>truthy</strong> by setting the value of the variable to our string, and is a bug!</p>
             </section>
 
             <section data-background="img/yoda.jpg">
                 <h2>Reverse it, you shall</h2>
-<pre class="large"><code>if ( 'constant' == $variable ) {
-    $force = 'will be with you';
+<pre><code>
+if ( 'wpcs' == $variable ) {
+    $result = 'Huzzah!';
 }</code></pre>
-<p>By <strong>reversing</strong> the statement, an ommission of an equals sign will <strong>produce an error</strong> which means you can quickly fix the bug and move on instead of scratching your head!</p>
+<p>By <strong>reversing</strong> the statement, an ommission of an equals sign will <strong>produce an error</strong> that you can fix immediately!</p>
+            </section>
+
+            <section data-background="img/yoda.jpg">
+            <h2>Error, you will get</h2>
+<pre><code>Parse error: syntax error,
+unexpected '=' in /example.php
+on line 5</code></pre>
+            <p><strong>Yoda Conditions</strong> should be used with the following conditions: <strong>==</strong>, <strong>!=</strong>, <strong>===</strong>, and <strong>!==</strong>.</p>
             </section>
 
             <!-- 6.7 -->
