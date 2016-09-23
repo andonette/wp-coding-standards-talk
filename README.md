@@ -5,3 +5,5 @@ WordPress Coding Standards have been around for a while, yet many developers don
 In this talk I’ll explain what they are, how they will help you write better, cleaner and more secure code and why you should be using them for all WordPress projects. I’ll also touch briefly on the steps required to get yourself up and running with WordPress Coding Standards.
 
 *NB: This is a high level talk, not a deeply technical one. While it does contain code, it's suitable for those who are still relatively new to developing with WordPress, or in general! :)*
+
+***View these slides online on [my website](https://davetgreen.me/wpcs-talk/)***
