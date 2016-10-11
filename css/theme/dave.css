@@ -670,3 +670,7 @@ body {
 .reveal .slide-background[data-background-hash^="img/phpcs-command-line.jpg"]::before {
   display: none;
 }
+
+.bold {
+  font-weight: 700 !important;
+}

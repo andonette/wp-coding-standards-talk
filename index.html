@@ -55,28 +55,28 @@
                 <h1>My Story</h1>
                 <ul>
                     <li class="fragment">
-                        <p>Have used <strong>PSR2</strong> standards in the past.</p>
-                    </li>
-                    <li class="fragment">
                         <p><strong>OCD</strong> when it comes to all things digital.</p>
                     </li>
                     <li class="fragment">
                         <p>Work on more <strong>team</strong> projects than ever.</p>
                     </li>
                     <li class="fragment">
-                        <p>Recently moved into writing <strong>plugins</strong>.</p>
+                        <p>Spending a lot more time writing <strong>plugins</strong>.</p>
                     </li>
                     <li class="fragment">
-                        <p>Trying to <strong>contribute</strong> more to core.</p>
+                        <p>Trying to increase my <strong>contributions</strong> to core.</p>
                     </li>
                     <li class="fragment">
                         <p>Make Do work with a lot of <strong>other agencies</strong>.</p>
                     </li>
                     <li class="fragment">
+                        <p>Have used <strong>PSR2</strong> standards in the past.</p>
+                    </li>
+                    <li class="fragment">
                         <p>Switched for <strong>PHP</strong> coding in <strong>September 2015</strong>.</p>
                     </li>
                     <li class="fragment">
-                        <p>About to make the switch for writing <strong>Javascript</strong>.</p>
+                        <p>In the process of switching for <strong>Javascript</strong>.</p>
                     </li>
                 </ul>
             </section>
@@ -110,7 +110,7 @@
             <!-- 4.5 -->
             <section data-background="img/accessibility.jpg">
                 <blockquote>
-                    <p class="large">All new or updated code released in WordPress must conform with the WCAG 2.0 guidelines at level AA. </p>
+                    <p class="large bold">All new or updated code released in WordPress must conform with the WCAG 2.0 guidelines at level AA. </p>
                     <cite class="large"><strong>Core Handbook</strong></cite>
                 </blockquote>
             </section>
@@ -174,55 +174,56 @@
             <!-- 6.4 -->
             <section data-background="img/deprecated.jpg">
                 <h1>Future Proofing</h1>
-                <h2>Avoid using <span>deprecated</span> functions to prevent potentially major issues.</h2>
+                <h2>Warnings when you use <span>deprecated</span> functions to prevent unwanted surprises.</h2>
             </section>
             <!-- 6.5 -->
             <section data-background="img/bugs.jpg">
                 <h1>Faster Debugging</h1>
-                <h2>Bugs are <span>quicker to find &amp; fix</span> because the code you write is <span>easier to read &amp; understand</span>.</h2>
+                <h2>Bugs are <span>quicker to find &amp; fix</span> because your code is<br/> <span>easier to read &amp; understand</span>.</h2>
             </section>
 			<!-- 6.6 Avoid Buggy Code -->
             <section data-background="img/yoda.jpg">
                 <h1>Avoid Pesky Bugs</h1>
                 <h2>Evaluate expressions using <span>Yoda conditions</span>. Reverse the expression, you will.</h2>
-<pre><code>if ( 'literal' == $variable ) {</code></pre>
-<pre><code>if ( true == $variable ) {</code></pre>
+<pre><code class="php">if ( 'literal' == $variable ) {
+if ( true == $variable ) {
+if ( function() == $variable ) {</code></pre>
             </section>
 
             <section data-background="img/yoda.jpg">
             <h2>The common approach</h2>
-<pre><code>$variable = 'wpcs';
+<pre><code class="php">$variable = 'wpcs';
 if ( $variable == 'wpcs' ) {
     $result = 'Huzzah!';
 }</code></pre>
-    <p>Here we're checking to see if the variable is equal to the string literal. In this case the condition is <strong>truthy</strong>, and we get the result we're expecting.</p>
+    <p>Here we're checking to see if the variable is equal to the string literal. In this case the expression resolves as <strong>truthy</strong>, and we get the desired result.</p>
             </section>
 
             <section data-background="img/yoda.jpg">
                 <h2>Make mistakes, you will</h2>
-<pre><code>$variable = 'ooops!';
+<pre><code class="php">$variable = 'ooops!';
 // Ooops, we lost an equals!
 if ( $variable = 'wpcs' ) {
     $result = 'Huzzah!';
 }</code></pre>
-<p>Ommitting the second equals sign means that this conditional <strong>silently</strong> resolves as <strong>truthy</strong> by setting the value of the variable to our string, and is a bug!</p>
+<p>Ommitting the second comparison operator (equals) means that this expression <strong>silently</strong> resolves as <strong>truthy</strong>, and is a bug that may take you several minutes to fix!</p>
             </section>
 
             <section data-background="img/yoda.jpg">
                 <h2>Reverse it, you shall</h2>
-<pre><code>$variable = 'ooops!';
-if ( 'wpcs' == $variable ) {
+<pre><code class="php">$variable = 'ooops!';
+if ( 'wpcs' = $variable ) {
     $result = 'Huzzah!';
 }</code></pre>
-<p>By <strong>reversing</strong> the expression, an ommission of an equals sign will <strong>produce an error</strong> that you can fix immediately!</p>
+<p>By <strong>reversing</strong> the expression, an ommission of the second comparison operator (equals) will <strong>produce an error</strong> that you can fix immediately. Huzzah!</p>
             </section>
 
             <section data-background="img/yoda.jpg">
             <h2>Error, you will get</h2>
-<pre><code>Parse error: syntax error,
+<pre><code class="php">Parse error: syntax error,
 unexpected '=' in /example.php
 on line 5</code></pre>
-            <p><strong>Yoda Conditions</strong> should be used with the following conditions: <strong>==</strong>, <strong>!=</strong>, <strong>===</strong>, and <strong>!==</strong>.</p>
+            <p><strong>Yoda Conditions</strong> should only be used with the following comparison operators: <strong>==</strong>, <strong>!=</strong>, <strong>===</strong>, and <strong>!==</strong>.</p>
             </section>
 
             <!-- 6.7 -->
@@ -233,7 +234,7 @@ on line 5</code></pre>
 
             <section data-background="img/documentation.jpg">
             <h2>File documentation</h2>
-<pre class="small"><code>/**
+<pre class="small"><code class="php">/**
  * A description of what purpose this
  * file serves in the theme/plugin.
  *
@@ -243,7 +244,7 @@ on line 5</code></pre>
 
             <section data-background="img/documentation.jpg">
                 <h2>Function documentation</h2>
-<pre class="small"><code>/**
+<pre class="small"><code class="php">/**
  * Describe the function's purpose.
  * @param  int    $id    Post ID.
  * @param  array  $args  Arguments.
@@ -262,7 +263,7 @@ function do_something( $id, $args ) {</code></pre>
 
                 <p>Here we check to see if the input variable is a <strong>string</strong> as expected, before adding it to an array.</p>
 
-<pre class="xsmall"><code>$things = array();
+<pre class="xsmall"><code class="php">$things = array();
 if ( isset( $_POST['foo'] ) {
     $foo = $_POST['foo'];
 
@@ -277,7 +278,7 @@ if ( isset( $_POST['foo'] ) {
                 <h2>Sanitizing Input</h2>
 
                 <p>Here we properly sanitize an input variable before using it to update post meta.</p>
-<pre class="xsmall"><code>if ( isset( $_POST['foo'] ) {
+<pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) {
     $foo = sanitize_text_field( $_POST['foo'] );
 
     update_post_meta( $id, 'foo_meta', $foo );
@@ -289,7 +290,7 @@ if ( isset( $_POST['foo'] ) {
                 <h2>Escaping output</h2>
 
                 <p>Here we output a sanitized input variable, making sure it has been properly escaped.</p>
-<pre class="xsmall"><code>if ( isset( $_POST['foo'] ) {
+<pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) {
     $foo = sanitize_text_field( $_POST['foo'] );
     echo '<h1>' . esc_html( $foo ) . '</h1>';
 }
@@ -308,7 +309,7 @@ if ( isset( $_POST['foo'] ) {
             <section data-background="img/database.jpg">
                 <h2>The <span class="gold">WPDB</span> Way</h2>
                 <p>Lets get all posts with an ID less than <strong>99</strong>.</p>
-<pre class="small"><code>global $wpdb;
+<pre class="small"><code class="php">global $wpdb;
 $posts = $wpdb->get_results(
     "SELECT *
     FROM $wpdb->posts
@@ -323,18 +324,18 @@ $posts = $wpdb->get_results(
                 <h2>The <span class="gold">WP API</span> Way</h2>
                 <p>Pass an array of IDs into a new <strong>WP_Query</strong> and voila!</p>
 
-<pre class="small"><code>$ids = range(1, 98);
+<pre class="small"><code class="php">$ids = range(1, 98);
 $args = array(
     'post__in' => $ids,
 );
-$myquery = new WP_Query( $args )
+$my_query = new WP_Query( $args );
 </code></pre>
             </section>
 
             <!-- 6.10 -->
             <section data-background="img/future.jpg">
                 <h1>Easier to Maintain</h1>
-                <h2><span>Anyone can modify</span> your code to fix or improve it <span>right now</span> or <span>in the future</span>.</h2>
+                <h2><span>Anyone</span> can modify your code to fix or improve it <span>right now</span> or <span>in the future</span>.</h2>
             </section>
             <!-- 7. Making the switch -->
             <section>
@@ -345,12 +346,17 @@ $myquery = new WP_Query( $args )
             <section data-background="img/sniffing.jpg">
                 <h1>PHP Code Sniffer</h1>
                 <p>Install PHPCS on your machine using <strong>PEAR</strong> or <strong>Composer</strong>. <strong>Homebrew</strong> is an alternative for Mac OSX users.</p>
-                <p>Add the path to your <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
+                <p>Add the path to the <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
+            </section>
+            <section data-background="img/sniffing.jpg">
+                <h2>Adding Paths</h2>
+
+                <p>Example commands here.</p>
             </section>
             <!-- 7.2 WPCS from GitHub -->
             <section data-background="img/coding-standards.jpg">
                 <h1>WPCS from GitHub</h1>
-                <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way</p>
+                <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way.</p>
                 <p>Place them in a suitable directory and make a note of the location. Mine are in: <strong>/Users/davetgreen/.wpcs</strong></p>
             </section>
             <!-- 7.3 Decent code editor -->
@@ -409,7 +415,7 @@ $myquery = new WP_Query( $args )
             <!-- 8. Example -->
             <section class="no-trans">
             	<!-- <h1>Quick Example</h1> -->
-<pre class="small"><code>// A quick example
+<pre class="small"><code class="php">// A quick example
 if($force == "with you") {
  $victorious = you_will($be);
 }</code></pre>
@@ -427,7 +433,7 @@ if($force == "with you") {
 
             <section>
             <h1>Before <span>WPCS</span></h1>
-<pre class="small"><code>// A quick example
+<pre class="small"><code class="php">// A quick example
 if($force == "with you") {
  $victorious = you_will($be);
 }</code></pre>
@@ -436,7 +442,7 @@ if($force == "with you") {
             <section>
 
             <h1>After <span>WPCS</span></h1>
-<pre class="small"><code>// A quick example.
+<pre class="small"><code class="php">// A quick example.
 if ( 'with you' == $force ) {
     $victorious = you_will( $be );
 }</code></pre>
@@ -476,25 +482,12 @@ if ( 'with you' == $force ) {
                     </li>
                 </ul>
             </section>
-            <!-- 11. Closing remarks -->
-            <section>
-                <blockquote>
-                    <p>Switching to <strong>WordPress Coding Standards</strong> has done more than anything else in recent memory to improve the overall quality of the WordPress code I write.
-                        <br/>
-                        <br/> I wish I had switched earlier, and I encourage you to switch now to reap the benefits.</p>
-                    <cite>Dave Green</cite>
-                </blockquote>
-            </section>
-            <!-- 11.1 Goodbye -->
+            <!-- 11. Goodbye -->
             <section>
                 <h1>Thank you!</h1>
                 <h3>Slides available at:<a href="http://davetgreen.me/wpcs-talk/">davetgreen.me/wpcs-talk</a></h3>
                 <h3><a href="https://twitter.com/davetgreen">@davetgreen</a></h3>
-            </section>
-
-            <!-- 12 Questions -->
-            <section>
-                <h1>Questions?</h1>
+                <h2>Questions?</h2>
             </section>
         </div>
         <!-- /.slides -->
