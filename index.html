@@ -55,7 +55,7 @@
                 <h1>My Story</h1>
                 <ul>
                     <li class="fragment">
-                        <p><strong>OCD</strong> when it comes to all things digital.</p>
+                        <p><strong>OCD</strong> so I love clear structures and standards.</p>
                     </li>
                     <li class="fragment">
                         <p>Work on more <strong>team</strong> projects than ever.</p>
@@ -349,9 +349,13 @@ $my_query = new WP_Query( $args );
                 <p>Add the path to the <strong>phpcs</strong> command to your system <strong>PATH</strong>, transforming it into a <strong>global</strong> installation.</p>
             </section>
             <section data-background="img/sniffing.jpg">
-                <h2>Adding Paths</h2>
-
-                <p>Example commands here.</p>
+                <h2>Setting the path on OSX</h2>
+                <p>Open your Bash profile, append the path to <strong>phpcs</strong>, save the file, reload it and then echo the <strong>PATH</strong> to test it.</p>
+<pre class="small"><code>nano ~/.bash_profile</code></pre>
+<pre class="small"><code>export PATH=$PATH:/usr/local/bin/phpcs</code></pre>
+<pre class="small"><code>CRTL+X</code></pre>
+<pre class="small"><code>source ~/.bash_profile</code></pre>
+<pre class="small"><code>echo $PATH</code></pre>
             </section>
             <!-- 7.2 WPCS from GitHub -->
             <section data-background="img/coding-standards.jpg">
@@ -388,13 +392,16 @@ $my_query = new WP_Query( $args );
             </section>
             <!-- 7.4 PHP Code Sniffer -->
             <section data-background="img/plugin.jpg">
-                <h1>Configure PHPCS</h1>
-                <p>Set-up the plugin or native support for <strong>PHPCS</strong> accordingly. You will need the path to the directory containing the <strong>WPCS</strong> rules you downloaded from GitHub.</p>
-                <p>There are a number of options available such as checking on save, changing the way errors are displayed and even automatically fixing problems in some cases!</p>
+                <h1>Getting Ready</h1>
+                <ol>
+                    <li><strong>Install/enable</strong> the plugin or native PHPCS support.</li>
+                    <li>Add the path to the <strong>WPCS folder</strong> in your settings.</li>
+                    <li>Enable <strong>check on save</strong> to automatically sniff the code.</li>
+                    <li>Decide how you want to <strong>display errors</strong> in your code.</li>
+                    <li><strong>Automatically fix</strong> many issues by enabling PHP CS Fixer.</li>
+                </ol>
             </section>
-            <section data-background="img/sublime-phpcs.jpg" class="no-trans">
-
-            </section>
+            <section data-background="img/sublime-phpcs.jpg" class="no-trans"></section>
             <section>
             <h1>Alternatively...</h1>
             </section>
@@ -404,9 +411,7 @@ $my_query = new WP_Query( $args );
 
                 <h2>Run <span>PHPCS</span> directly from the command line, using it only when you need to.</h2>
             </section>
-            <section class="no-trans" data-background="img/phpcs-command-line.jpg">
-
-            </section>
+            <section class="no-trans" data-background-video="vid/WPCS.mov" data-background-video-loop="true" autobuffer></section>
             <section data-background="img/command-line.jpg">
                 <h1>Workflow</h1>
 
