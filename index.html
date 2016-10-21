@@ -255,7 +255,7 @@ function do_something( $id, $args ) {</code></pre>
             <!-- 6.8 -->
             <section data-background="img/security.jpg">
                 <h1>More Secure Code</h1>
-                <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span> of both input &amp; output data.</h1>
+                <h2>Consistent <span>validatation</span>, <span>sanitization</span> and <span>escaping</span> of your input &amp; output data.</h1>
             </section>
 
             <section data-background="img/security.jpg">
@@ -277,7 +277,7 @@ if ( isset( $_POST['foo'] ) {
             <section data-background="img/security.jpg">
                 <h2>Sanitizing Input</h2>
 
-                <p>Here we properly sanitize an input variable before using it to update post meta.</p>
+                <p>Here we validate then sanitize an input variable before using it to update post meta.</p>
 <pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) {
     $foo = sanitize_text_field( $_POST['foo'] );
 
@@ -289,7 +289,7 @@ if ( isset( $_POST['foo'] ) {
             <section data-background="img/security.jpg">
                 <h2>Escaping output</h2>
 
-                <p>Here we output a sanitized input variable, making sure it has been properly escaped.</p>
+                <p>Here we output a validated and sanitized input variable, making sure it has been properly escaped.</p>
 <pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) {
     $foo = sanitize_text_field( $_POST['foo'] );
     echo '<h1>' . esc_html( $foo ) . '</h1>';
@@ -359,7 +359,7 @@ $my_query = new WP_Query( $args );
             </section>
             <!-- 7.2 WPCS from GitHub -->
             <section data-background="img/coding-standards.jpg">
-                <h1>WPCS from GitHub</h1>
+                <h1>Get WPCS rules from GitHub</h1>
                 <p>Download the WPCS rules for PHPCS to your machine using <strong>Git</strong>, <strong>Pear</strong>, <strong>Composer</strong> or the old fashioned way.</p>
                 <p>Place them in a suitable directory and make a note of the location. Mine are in: <strong>/Users/davetgreen/.wpcs</strong></p>
             </section>
@@ -409,7 +409,8 @@ $my_query = new WP_Query( $args );
             <section data-background="img/command-line.jpg">
                 <h1>Command Line</h1>
 
-                <h2>Run <span>PHPCS</span> directly from the command line, using it only when you need to.</h2>
+                <h2>Run <span>PHPCS</span> directly from the command line when needed.</h2>
+<pre class="small php"><code>$ phpcs --standard=WordPress test.php</code></pre>
             </section>
             <section class="no-trans" data-background-video="vid/WPCS.mov" data-background-video-loop="true" autobuffer></section>
             <section data-background="img/command-line.jpg">
