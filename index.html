@@ -278,7 +278,7 @@ if ( isset( $_POST['foo'] ) {
                 <h2>Sanitizing Input</h2>
 
                 <p>Here we validate then sanitize an input variable before using it to update post meta.</p>
-<pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) {
+<pre class="xsmall"><code class="php">if ( isset( $_POST['foo'] ) ) {
     $foo = sanitize_text_field( $_POST['foo'] );
 
     update_post_meta( $id, 'foo_meta', $foo );
