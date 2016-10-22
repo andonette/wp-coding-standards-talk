@@ -653,7 +653,7 @@ body {
 }
 
 .no-trans:before {
-  display: none;
+  display: none !important;
 }
 
 .make-do-logo {
