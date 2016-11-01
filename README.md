@@ -7,3 +7,5 @@ In this talk I’ll explain what they are, how they will help you write better, 
 *NB: This is a high level talk, not a deeply technical one. While it does contain code, it's suitable for those who are still relatively new to developing with WordPress, or in general! :)*
 
 ***View these slides online on [my website](https://davetgreen.me/wpcs-talk/)***
+
+***A recording of this talk as presented at WordCamp Manchester is coming soon on WordPress.tv***
