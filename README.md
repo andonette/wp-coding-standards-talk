@@ -1,4 +1,4 @@
-# Why Switching to WordPress Coding Standards Will Make You A Better Developer
+# Why Switching to WordPress Coding Standards <br/> Will Make You A Better Developer
 
 WordPress Coding Standards have been around for a while, yet many developers don’t write code with them, let alone know they exist. This was the case with me until September 2015 when I made the switch, and now I wish I’d dived in earlier! 
 
